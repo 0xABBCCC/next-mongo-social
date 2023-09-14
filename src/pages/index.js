@@ -3,6 +3,8 @@ import handleDelete from '@/hooks/deletePost';
 import timeAgo from '@/hooks/timeAgo';
 import { useState, useEffect } from 'react';
 
+import Image from 'next/image';
+
 export default function Home() {
     const [posts, setPosts] = useState([]);
     const [newPost, setNewPost] = useState({
@@ -34,7 +36,7 @@ export default function Home() {
       try {
         return (
           <div className='create-post-image-container'>
-            <img src={URL.createObjectURL(newPost.image)} alt="Attached" />
+            <Image src={URL.createObjectURL(newPost.image)} width={100} height={100} alt="attached" />
           </div>
         );
       } catch (error) {
@@ -117,7 +119,7 @@ export default function Home() {
               { posts.map((post, index) => (
                 <div key={index} className='item'>
                   <div className='item-image'>
-                    <img src={`data:image/png;base64,${post.image}`} alt={post.caption} />
+                    <Image src={`data:image/png;base64,${post.image}`} width={100} height={100} alt={post.caption}/>
                   </div>
                   <h1 className='item-caption'>{post.caption}</h1>
                   <div className='item-info-wrapper'>
