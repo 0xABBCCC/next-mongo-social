@@ -64,7 +64,7 @@ export default function Home() {
               ) : (
                 <div className='create-post-image-container'>
                   <div>
-                    <h1 style={{color: "var(--zinc-600)"}}>ATTACH IMAGE</h1>
+                    <h1 style={{color: "var(--zinc-600)", fontSize: "22px"}}>ATTACH IMAGE</h1>
                     <h1 style={{color: "var(--zinc-600)", fontSize: "12px", textAlign: "center"}}>Less than 1mb*</h1>
                   </div>
                 </div>

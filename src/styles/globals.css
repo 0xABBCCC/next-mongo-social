@@ -303,8 +303,8 @@ img {
 }
 
 .create-post-image-container {
-  height: 300px;
-  width: 300px;
+  height: 250px;
+  width: 250px;
   background-color: var(--zinc-700);
   display: grid;
   place-items: center;
